@@ -1,0 +1,64 @@
+@font-face {
+    font-family:'Fontsp';
+    src: url('font-family/Fontsp.OTF');
+   }
+
+   body { 
+    font-family: 'Fontsp';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+  }
+  .navbar .logo img {
+    height: 24px;
+    margin-right: 10px;
+  }
+  .navbar .logo span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+  }
+  .navbar .search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #00b300;
+    border-radius: 25px;
+    padding: 5px 10px;
+  }
+  .navbar .search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    width: 200px;
+  }
+  .navbar .search-bar button {
+    background-color: #00b300;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .navbar .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  .navbar .nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+  }

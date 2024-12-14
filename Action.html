@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Action</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="SFProDisplay-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="indicator.css">
+    <link rel="stylesheet" href="Action.css" />
+    <link rel="stylesheet" href="navbar.css"/>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <i class="fas fa-wind"></i>
+         <span><b>
+             Udara bersih.id </b>
+         </span>
+        </div>
+        <div class="search-bar">
+         <input placeholder="Search for a city or country" type="text"/>
+         <button> Check Air Quality </button>
+        </div>
+        <nav class="nav-links">
+            <a href="homepage.html"> Home </a>
+            <a href="Data.html"> Data Air Poluttion</a>
+            <a href="Action.html"> Our Action</a>
+           </nav>
+       </div>
+    <div class="hero">
+        <img src="imageshome/homepage.png"/>
+
+        <div class="hero-text">
+         <h1>
+          Clean Air Together
+         </h1>
+         <p>
+          Air pollution is a major health and environmental risk. We're on a mission to raise awareness and promote solutions for cleaner air. Join our campaign.
+         </p>
+         <button class="btn">
+          Learn more
+         </button>
+        </div>
+       </div>
+       <div class="section">
+        <h2>
+         Sources of Air Pollution
+        </h2>
+        <div class="grid-container">
+         <div class="grid-item">
+          <img alt="Transportation pollution" height="100" src="https://storage.googleapis.com/a1aa/image/y6RxXRtDxhIaFtaxIGgHFGjq40fGAgQHcGUXJ6jTpDFte04TA.jpg" width="150"/>
+          <p>
+           Transportation
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Industrial Processes pollution" height="100" src="https://storage.googleapis.com/a1aa/image/H3OPYqYfrtSmSye7BQerUigIDqCQergiSJ5PfQzzKh6yrnGfE.jpg" width="150"/>
+          <p>
+           Industrial Processes
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Power Generation pollution" height="100" src="https://storage.googleapis.com/a1aa/image/Le5tp1Di541NSa8e8X0yXLzew2BBraGlTvpuL164YmpH7pxnA.jpg" width="150"/>
+          <p>
+           Power Generation
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Agriculture pollution" height="100" src="imageshome/sawah.jpg" width="150"/>
+          <p>
+           Agriculture
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Residential Heating pollution" height="100" src="imageshome/aircooling.jpg" width="150"/>
+          <p>
+           Residential Heating
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="section">
+        <h2>
+         Common Air Pollutants
+        </h2>
+        <div class="grid-container">
+         <div class="grid-item">
+          <img alt="Particulate Matter (PM)" height="100" src="https://storage.googleapis.com/a1aa/image/W1ZtL5uYo74BPRKRTcJgbcqhEskaINuQhnMGzjav2FjSPNeJA.jpg" width="150"/>
+          <p>
+           Particulate Matter (PM)
+           <br/>
+           <span>
+            Dust, dirt, soot, and smoke
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Nitrogen Dioxide (NO2)" height="100" src="https://storage.googleapis.com/a1aa/image/J0xwMwzjp9qcOJijDto6VrnwkxVbitnO8yvx4LfqxQUpe04TA.jpg" width="150"/>
+          <p>
+           Nitrogen Dioxide (NO2)
+           <br/>
+           <span>
+            Traffic emissions, power plants
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Sulfur Dioxide (SO2)" height="100" src="https://storage.googleapis.com/a1aa/image/q4FHfC1nZkxkBK9vHs5dfG8STerbptH0jNAlYcag5zm56pxnA.jpg" width="150"/>
+          <p>
+           Sulfur Dioxide (SO2)
+           <br/>
+           <span>
+            Industrial emissions
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Carbon Monoxide (CO)" height="100" src="imageshome/co.jpg" width="150"/>
+          <p>
+           Carbon Monoxide (CO)
+           <br/>
+           <span>
+            Incomplete combustion
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Ozone (O3)" height="100" src="imageshome/ozon.jpeg" width="150"/>
+          <p>
+           Ozone (O3)
+           <br/>
+           <span>
+            Secondary pollutant
+           </span>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="section">
+        <h2>
+         Health Impacts of Air Pollution
+        </h2>
+        <div class="grid-container">
+         <div class="grid-item">
+          <img alt="Asthma" height="100" src="imageshome/astham.jpg" width="150"/>
+          <p>
+           Asthma
+           <br/>
+           <span>
+            Chronic respiratory condition
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Lung Cancer" height="100" src="imageshome/lungcancer.jpg" width="150"/>
+          <p>
+           Lung Cancer
+           <br/>
+           <span>
+            Cancer of the lungs
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Heart Disease" height="100" src="imageshome/Coronary-heart-disease.jpg" width="150"/>
+          <p>
+           Heart Disease
+           <br/>
+           <span>
+            Cardiovascular illness
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Stroke" height="100" src="imageshome/Stroke.jpg" width="150"/>
+          <p>
+           Stroke
+           <br/>
+           <span>
+            Blood vessel blockage
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Premature Death" height="100" src="imageshome/premature.jpg" width="150"/>
+          <p>
+           Premature Death
+           <br/>
+           <span>
+            Life expectancy reduction
+           </span>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="section">
+        <h2>
+         Impacts on the Environment
+        </h2>
+        <div class="grid-container">
+         <div class="grid-item">
+          <img alt="Acid Rain" height="100" src="https://storage.googleapis.com/a1aa/image/92hMmPr8nR4cI9BmESrsfKNLKsbwFb7gOI2rp4eaKbCn904TA.jpg" width="150"/>
+          <p>
+           Acid Rain
+           <br/>
+           <span>
+            Corrosive precipitation
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Eutrophication" height="100" src="https://storage.googleapis.com/a1aa/image/4EyIpeGJeygW0UdHGF8XHOm9aGWOcfLX0J42eXiMF7aV1TjPB.jpg" width="150"/>
+          <p>
+           Eutrophication
+           <br/>
+           <span>
+            Excess nutrient runoff
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Ozone Depletion" height="100" src="https://storage.googleapis.com/a1aa/image/n3Onh6aMnhr9IdEsNFSVDBmXCP0Ve9GezPoZdRhcsmLg904TA.jpg" width="150"/>
+          <p>
+           Ozone Depletion
+           <br/>
+           <span>
+            Stratospheric ozone thinning
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Climate Change" height="100" src="https://storage.googleapis.com/a1aa/image/62mJwjTLSzZeXaJk38V4duNl80bOTXhI4Mqsv9gRXegh904TA.jpg" width="150"/>
+          <p>
+           Climate Change
+           <br/>
+           <span>
+            Global temperature rise
+           </span>
+          </p>
+         </div>
+         <div class="grid-item">
+          <img alt="Biodiversity Loss" height="100" src="https://storage.googleapis.com/a1aa/image/7bC2N2xeqqwyUCbgbFOXkf9Zl5E49zYGILe5xinJRZJQ7pxnA.jpg" width="150"/>
+          <p>
+           Biodiversity Loss
+           <br/>
+           <span>
+            Species extinction risk
+           </span>
+          </p>
+         </div>
+        </div>
+       </div>
+      </body>
+     </html>
+</body>
+</html>

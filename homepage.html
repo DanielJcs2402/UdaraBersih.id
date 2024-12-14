@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="SFProDisplay-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="indicator.css">
+    <title>UdaraBersih</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+         <i class="fas fa-wind"></i>
+         <span><b>
+             Udara bersih.id </b>
+         </span>
+        </div>
+        <div class="search-bar">
+         <input placeholder="Search for a city or country" type="text"/>
+         <button> Check Air Quality </button>
+        </div>
+        <nav class="nav-links">
+         <a href="homepage.html"> Home </a>
+         <a href="data.html"> Data Air Poluttion</a>
+         <a href="Action.html"> Our Action</a>
+        </nav>
+    </header>
+    <main class="content">
+        <div class="text">
+         <h1>
+            <p><span class="green-text">Air pollution</span> is harming our health and our climate</p>
+         </h1>
+        </div>
+        <div class="image">
+        <img src="imageshome/homepage.png">
+        </div>
+    </main>
+
+    <div class="container">
+
+
+        <h1>Air pollution in your location</h1>
+        <div class="status">
+            <h2><div class="icon"><i class="fas fa-smile"></i> Today</h2>
+            <p>PM2.5 • 13 • Good • Central Jakarta</p>
+        </div> 
+        </div>
+
+        <div class="pollutants">
+            <div class="card">
+                <h2>Particulate matter (PM2.5)</h2>
+                <p>25 µg/m³</p>
+                <p class="percentage">-12%</p>
+            </div>
+            <div class="card">
+                <h2>Nitrogen dioxide (NO2)</h2>
+                <p>17 µg/m³</p>
+                <p class="percentage">-15%</p>
+            </div>
+            <div class="card">
+                <h2>Sulfur dioxide (SO2)</h2>
+                <p>15 µg/m³</p>
+                <p class="percentage">-10%</p>
+            </div>
+        </div>
+        <h1>The impacts of air pollution on health</h1>
+        <div class="health-impacts">
+            <div class="card">
+                <div class="icon"><i class="fas fa-heart"></i></div>
+                <h2>Increases the Risk of Cardiovascular Diseases</h2>
+                <p>Long-term exposure to air pollution can damage blood vessels, leading to a higher risk of heart disease and stroke.
+                </p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-lungs"></i></div>
+                <h2>Respiratory problems</h2>
+                <p>Breathing in polluted air can damage your lungs and airways, leading to symptoms such as coughing, wheezing, and shortness of breath.</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-lungs-virus"></i></div>
+                <h2>Raises the Risk of Lung Cancer</h2>
+                <p>Air pollution, especially from vehicle emissions and industrial activities, contains carcinogenic substances that can lead to lung cancer with prolonged exposure.</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div class="card">
+                <h2>7 Million Premature Deaths per Year</h2>
+                <p>The World Health Organization (WHO) estimates that air pollution kills approximately 7 million people every year.</p>
+        
+            </div>
+            <div class="card">
+                <h2>91% Of the world's population live in areas where air pollution exceeds WHO limits.</h2>
+                <p>This highlights the widespread impact of poor air quality across the globe.</p>
+              
+            </div>
+            <div class="card">
+                <h2>40% of Urban Areas Exceed WHO Guidelines</h2>
+                <p>Nearly 40% of urban areas around the world have air pollution levels that surpass the limits set by the World Health Organization.</p>
+          
+            </div>
+        </div>
+    </div>
+        <div class="reduce-section">
+         <h2>How to reduce air pollution</h2>
+         <div class="info-section">
+          <div class="reduce-box">
+           <img alt="Public transport bus" height="100" src="imageshome/tj.jpg" width="200"/>
+           <h3>Use public transport</h3>
+          </div>
+          <div class="reduce-box">
+           <img alt="Windmill for renewable energy" height="100" src="https://storage.googleapis.com/a1aa/image/0eT7P1qfF0rUhEFd9irzLQ7loU2TXu73vyaBGv6vEomWAg4TA.jpg" width="100"/>
+           <h3>Use renewable energy</h3>
+          </div>
+          <div class="reduce-box">
+           <img alt="Burn waste" height="100" src="imageshome/bakarsampah.jpeg" width="200"/>
+           <h3>Don't burn waste</h3>
+          </div>
+          <div class="reduce-box">
+           <img alt="Tree" height="100" src="https://storage.googleapis.com/a1aa/image/yM0ffnQIAUhx1UzdLQcldGHnsR5KcwCjMipK0ts3bInYAg4TA.jpg" width="100"/>
+           <h3>Plant oxygen-producing plants</h3>
+          </div>
+         </div>
+        
+        </div>
+
+
+        <div class="section map">
+            <h2>Real-time global air quality map</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js">
+    </script>
+<!--   
+       <footer>
+        <a href="#"> About </a>
+        <a href="#"> Privacy Policy </a>
+        <a href="#"> Terms of Service </a>
+        <div class="footer-bottom">
+            <p>&copy; 2024 UdaraBersih.id - All rights reserved</p>
+        </footer>
+        </div> -->
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <nav>
+            <a href="#"> About </a>
+            <a href="#"> Privacy Policy </a>
+            <a href="#"> Terms of Service </a>
+        </nav>
+        <div class="footer-bottom">
+            <p>&copy; 2024 UdaraBersih.id - All rights reserved</p>
+        </div>
+    </footer>
+    <script src="homepage.js"></script>
+    <script src="scroll.js"></script>
+    <script src="map.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
